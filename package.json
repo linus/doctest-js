@@ -4,7 +4,7 @@
   "description": "Run doc examples as tests",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
+      "import": "./src/index.js",
       "require": "./dist/index.cjs"
     }
   },
