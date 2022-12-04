@@ -20,7 +20,7 @@ module.exports = [
     ...common,
     output: {
       libraryTarget: 'commonjs2',
-      filename: 'cjs/index.js',
+      filename: 'index.cjs',
       hashFunction: 'xxhash64',
       chunkFormat: 'commonjs',
     },
@@ -31,7 +31,7 @@ module.exports = [
     },
     output: {
       libraryTarget: 'module',
-      filename: 'mjs/index.js',
+      filename: 'index.mjs',
       hashFunction: 'xxhash64',
       chunkFormat: 'module',
     },
