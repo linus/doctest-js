@@ -2,10 +2,16 @@
   "name": "@supabase/doctest-js",
   "version": "0.2.0",
   "description": "Run doc examples as tests",
-  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "type": "module",
   "scripts": {
     "build": "webpack --mode production",
+    "postbuild": "echo '{\"type\":\"module\"}' > dist/mjs/package.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
     "test": "mocha",
     "test:watch": "npm run test -- --watch",
     "lint": "eslint {src,test}/**/*.js webpack.config.js",
