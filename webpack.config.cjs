@@ -29,6 +29,7 @@ module.exports = [
     experiments: {
       outputModule: true,
     },
+    target: ['es5', 'node'],
     output: {
       libraryTarget: 'module',
       filename: 'index.mjs',
