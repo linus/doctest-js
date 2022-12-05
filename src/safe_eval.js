@@ -4,7 +4,7 @@ import path from 'path'
 export const evalExpression = async (evalString, filePath) => {
   try {
     const cleanPath = (filePath !== undefined) ? filePath.replace(/\\/g,'/') : filePath;
-    const code = `import('${cleanPath}').then(module => { return module.${evalString}; })`
+    const code = `import('${cleanPath}').then(module => module.${evalString})`
     const result = await eval(code)
     return { result }
   } catch (error) {
